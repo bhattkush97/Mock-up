@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title> My PortFolio</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <!-- for w3.css -->
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+  <!-- have to add these two coz w3.css is from w3 school-->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <style>
+  
+  
+  
+  
+  input[type=text] {
+    width: 130px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    background-color: white;
+    background-image: url('searchicon.png');
+    background-position: 10px 10px; 
+    background-repeat: no-repeat;
+    padding: 12px 20px 12px 40px;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+}
+
+input[type=text]:focus {
+    width: 100%;
+} 
+  
+    .fa {
+  padding: 20px;
+  font-size: 30px;
+  width: 30px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+  border-radius: 50%;
+}
+
+   .fa:hover {
+    opacity: 0.7;
+}
+
+   .fa-facebook {
+  background: #3B5998;
+  color: white;
+}
+
+   .fa-twitter {
+  background: #55ACEE;
+  color: white;
+}
+
+   .fa-google {
+  background: #dd4b39;
+  color: white;
+}
+
+   .fa-linkedin {
+  background: #007bb5;
+  color: white;
+}
+
+   .fa-youtube {
+  background: #bb0000;
+  color: white;
+}
+
+.fa-envelope {
+background: #2f2f2f
+color: white;
+}
+
+   .fa-instagram {
+  background: #125688;
+  color: white;
+}
+
+    .navbar {
+      margin-bottom: 0;
+      border-radius: 0;
+    }
+    
+    
+    footer {
+      background-color: #2f2f2f;
+      padding: 25px;
+    }
+
+
+  body, html {
+  height: 100%;
+  margin: 0;
+  font: 400 15px/1.8 "Lato", sans-serif;
+  color: #777;
+}
+
+.bgimg-1, .bgimg-2, .bgimg-3, .bgimg-12  {
+  position: relative;
+  opacity: 0.65;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+}
+.bgimg-1 {
+  background-image: url("bgimg-1.jpg");
+  min-height: 100%;
+}
+
+.bgimg-2 {
+  background-image: url("bgimg-2.jpg");
+  min-height: 400px;
+}
+
+.bgimg-3 {
+  background-image: url("bgimg-3.jpg");
+  min-height: 400px;
+}
+
+.bgimg-12 {
+  background-image: url("bgimg-12.jpg");
+  min-height: 100%;
+}
+
+.caption {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 100%;
+  text-align: center;
+  color: #000;
+}
+
+.caption span.border {
+  background-color: #111;
+  color: #fff;
+  padding: 18px;
+  font-size: 25px;
+  letter-spacing: 10px;
+}
+
+h3 {
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  font: 20px "Lato", sans-serif;
+  color: #111;
+}
+
+/* Turn off parallax scrolling for tablets and phones */
+@media only screen and (max-device-width: 1024px) {
+    .bgimg-1, .bgimg-2, .bgimg-3 {
+        background-attachment: scroll;
+    }
+}
+
+li {
+    float: left;
+}
+
+li a, .dropbtn {
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover, .dropdown:hover .dropbtn {
+}
+
+li.dropdown {
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.glyphicon.glyphicon-globe {
+    font-size: 350px;
+}
+
+.glyphicon.glyphicon-signal {
+    font-size: 300px;    
+}
+
+
+  
+  </style>
+</head>
+<body>
+
+
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle=" " data-target="#myNavbar"> 
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="#"> Portfolio/Website</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li class="active"><a href="portfolio.html">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="com_soon.html">Gallery</a></li>
+        <li><a href="#contact">Contact</a></li>
+		<li class="dropdown">
+    <a href="javascript:void(0)" class="dropbtn"><span class="glyphicon glyphicon-log-in"></span> Join us</a>
+    <div class="dropdown-content">
+      <a href="register.html">Login</a>
+      <a href="#join">Sign up</a>
+    </div>
+  </li>      
+    </div>
+  </div>
+</nav>
+
+
+<div class="bgimg-3">
+
+<div class ="caption">
+
+<div>
+
+  <input type="text" align="center-right" name="search" placeholder="Search..">
+
+</div>
+
+<span class="border">WELCOME</span>
+</div>
+</div>
+
+
+<div class="jumbotron">
+  <div class="container text-center">
+    <h1>My Portfolio</h1>      
+    <p>Some text that represents "Me"...
+
+           I'm an easy Learner and a hardworker. Ready to face any kind of Challenge anytime.
+      I consider my self as a hardworking and apitious person . Programming is a major part of my life , 
+      and so I spend most of the day Reading and searching and downloading ready code .. 
+           At my free time , I like solely walks , Watch Animes , and listening to Music.    
+  </div>
+</div>
+<div class="bgimg-2">
+<div class ="caption">
+<span class="border">SCROLL DOWN</span>
+</div>
+</div>
+<!-- Container (About Section) -->
+<div id="about" class="container-fluid">
+  <div class="row">
+    <div class="col-sm-8">
+      <h2>About Me Page</h2><br>
+      <h4>I consider my self as a hardworking and apitious person.</h4><br>
+      <p>I consider my self as a hardworking and apitious person. I'm an easy Learner and a hardworker. Ready to face any kind of Challenge anytime.
+      I consider my self as a hardworking and apitious person . Programming is a major part of my life , 
+      and so I spend most of the day Reading and searching and downloading ready code .. 
+           At my free time , I like solely walks , Watch Animes , and listening to Music..</p>
+      <br><button class="btn btn-default btn-lg"><a href="#contact">Get in Touch</a></button>
+    </div>
+    <div class="col-sm-4">
+      <span class="glyphicon glyphicon-signal logo"></span>
+    </div>
+  </div>
+</div>
+
+<div class="container-fluid bg-grey">
+  <div class="row">
+    <div class="col-sm-4">
+      <span class="glyphicon glyphicon-globe logo slideanim" ></span>
+    </div>
+    <div class="col-sm-8">
+      <h2>My Values</h2><br>
+      <h4><strong>MISSION:</strong> My mission is mission Kashmir.</h4><br>
+      <p><strong>VISION:</strong> My vision is Clear.</p>
+    </div>
+  </div>
+</div>
+
+<!-- Till Here....-->
+<br><p>&nbsp</p>
+<br><p>&nbsp</p>
+<br><p>&nbsp</p>
+<div style="position:relative;">
+  
+<div class="container-fluid bg-3 text-center">    
+  <h3>Some of my Work</h3><br>
+  <div class="row">
+    <div class="col-sm-4">
+      <p>Project 1</p>
+      <img src="p1.jpg" class="img-responsive" style="width:100%" alt="Image">
+    </div>
+    <div class="col-sm-4"> 
+      <p>Project 2</p>
+      <img src="p2.jpg" class="img-responsive" style="width:100%" alt="Image">
+    </div>
+    <div class="col-sm-4"> 
+      <p>Project 3</p>
+      <img src="p3.jpg" class="img-responsive" style="width:100%" alt="Image">
+	  <!--
+	  <img src="https://placehold.it/150x80?text=PROJ.3" class="img-responsive" style="width:100%" alt="Image">-->
+    </div>
+    
+  </div>
+</div><br>
+<br><p>&nbsp</p>
+<br><p>&nbsp</p>
+
+<div class="container-fluid bg-3 text-center">    
+  <div class="row">
+    <div class="col-sm-4">
+      <p>Project 4</p>
+      <img src="p4.jpg" class="img-responsive" style="width:100%" alt="Image">
+    </div>
+    <div class="col-sm-4"> 
+      <p>Project 5</p>
+      <img src="p5.html" class="img-responsive" style="width:100%" alt="Image">
+    </div>
+    <div class="col-sm-4"> 
+      <p>Project 6</p>
+      <img src="https://placehold.it/150x80?text=ComingSoon" class="img-responsive" class="img-responsive" style="width:100%" alt="Image">
+    </div>
+    
+  </div></div>
+</div><br><br>
+<br><p>&nbsp</p>
+
+<div class="bgimg-12">
+<div class ="caption">
+<span class="border">SCROLL UP</span>
+</div>
+</div>
+<!-- SECTION FOR DIRECTLY SIGNUP-->
+<div id="join" class="container-fluid">
+<div class="col-sm-8">
+      <h2>JOIN US</h2><br></div>
+<div class="w3-container w3-padding-64 w3-pale-red w3-center w3-wide" id="join">
+  <h1>JOIN US BY SIMPLE CLICKING </h1>
+  <p class="w3-large">HELPER NEEDED, 2017</p>
+  <p class="w3-xlarge">
+    <button onclick="document.getElementById('id01').style.display='block'" class="w3-button w3-round w3-red w3-opacity w3-hover-opacity-off" style="padding:8px 60px">SIGN UP</button>
+  </p>
+</div></div>
+
+
+<!-- modal -->
+<div>
+<div id="id01" class="w3-modal" style="display: block;">
+  <div class="w3-modal-content w3-card-4 w3-animate-zoom" style="padding:32px;max-width:600px">
+    <div class="w3-container w3-white w3-center">
+      <h1 class="w3-wide">WELCOME TO OUR FAMILY</h1>
+      <p>You are few Clicks Away.</p>
+      <form>
+        <input class="w3-input w3-border" type="text" placeholder="Name" name="name">
+      </form>
+      <p><i>Sincerely, Kushagra Bhatt; </i></p>
+      <div class="w3-row">
+        <div class="w3-half">
+          <a href="register.html"><button onclick="document.getElementById('id01').style.display='none'" type="button" class="w3-button w3-block w3-green">Join Now</button></a>
+        </div>
+        <div class="w3-half">
+          <a href="#"><button onclick="document.getElementById('id01').style.display='none'" type="button" class="w3-button w3-block w3-red">Join Later</button></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+<!--
+<footer class="container-fluid bg-4 text-center">
+  <p>YOU CAN ALSO DIRECTLY<a href="portfolio_register.html"> REGISTER </a> HERE TO JOIN US AND HAVE A 24/7 ONLINE SUPPORT</p>
+  <a href="#"> Kushagra Bhatt </a>
+  <p><a href="#"> (Web Designer)</a></p>  
+</footer>
+-->
+
+
+<div class="bgimg-1">
+<div class ="caption">
+<span class="border">SCROLL UP  AND HAVE FUN...</span>
+</div>
+</div>
+
+<!-- Footer ke Social Links -->
+<div id="footer-social-links">
+    <article class="page-content">
+        <a class="read-on hidden scroll-to-footer" href="#still-scrolling">Read On</a>
+                    <h1 id="still-scrolling">Still Scrolling?</h1><p>&nbsp;</p><p>&nbsp;</p>
+                        <h3>   Why not connect?</h3><p>&nbsp;</p><p>&nbsp;</p>
+                
+        <!-- Footer ke Social Buttons -->
+        <div id="footer-social-buttons" class="no-effects">
+            <ul><p>&nbsp;</p>
+			<div class="col-sm-2">
+			   <a href="#" class="fa fa-facebook"></a></div>
+			<div class="col-sm-2">   
+               <a href="#" class="fa fa-twitter"></a></div>
+            <div class="col-sm-2">
+      		   <a href="#" class="fa fa-google"></a></div>
+			<div class="col-sm-2">   
+               <a href="#" class="fa fa-linkedin"></a></div>
+			<div class="col-sm-2">   
+               <a href="#" class="fa fa-youtube"></a></div>
+			<div class="col-sm-2">
+               <a href="#" class="fa fa-instagram"></a></div>
+			<div class="col-sm-2">
+			   <a href="#" class="fa fa-envelope"></a></div>
+            </ul>
+            <div class="clear">
+			</div>
+			<p>&nbsp;</p>
+        </div>
+		<p>&nbsp;</p>
+      
+        
+<!-- Contact Container-->
+<div id="contact" class="container-fluid bg-grey">
+  <h2 class="text-center">Link With us</h2>
+  <div class="row">
+    <div class="col-sm-5">
+      <p>Contact Me and i'll get back to you within 24 hours.</p>
+      <p><span class="glyphicon glyphicon-map-marker"></span> Delhi, India</p>
+      <p><span class="glyphicon glyphicon-phone"></span> +91 9090909090</p>
+      <p><span class="glyphicon glyphicon-envelope "></span> myemail@dontcall.com</p>
+    </div>
+    <div class="col-sm-7 slideanim">
+      <div class="row">
+        <div class="col-sm-6 form-group">
+          <input class="form-control" id="name" name="name" placeholder="Name" type="text" required>
+        </div>
+        <div class="col-sm-6 form-group">
+          <input class="form-control" id="email" name="email" placeholder="Email" type="email" required>
+        </div>
+      </div>
+      <textarea class="form-control" id="comments" name="comments" placeholder="Comment" rows="5"></textarea><br>
+      <div class="row">
+        <div class="col-sm-12 form-group">
+          <button class="btn btn-default pull-right"><a href="thank.html">Send</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Till Here-->
+        
+
+        <!-- Here is the newsletter....have to set later 
+
+        <form id="newsletter" action="thank.html" method="post">
+            <input name="cm-khitjj-khitjj" type="text" placeholder="Type your email address here">
+            <button class="btn success"><a href="thank.html" >Submit</a>
+        </form>-->
+        
+        <div class="clear"><!-- --></div>
+    </article>
+</div>
+		
+
+<footer id="copyright" class="copyright">
+				<div class="container">
+					<div class="row">
+													<div class="col-sm-4 copyright-info">
+								<div><a href="portfolio.html"><span id=":ts.co" class="tL8wMe EMoHub" dir="ltr" style="text-align: left;">Copyrights @ </span><span style="font-size: 14.0pt; mso-bidi-font-size: 12.0pt; line-height: 107%; font-family: 'Calibri','sans-serif'; mso-ascii-theme-font: minor-latin; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; mso-hansi-theme-font: minor-latin; mso-bidi-font-family: 'Times New Roman'; mso-bidi-theme-font: minor-bidi; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA;">KB CREATION Pvt. Ltd.</span></a>
+						</div><!-- close .site-info -->
+						 
+						<div class="col-sm-6 pull-right">
+							<div class="footer-menu ">
+															</div>
+						</div>
+					</div>
+					
+										
+										<div id="back-to-top" data-spy="affix" data-offset-top="10" class="back-to-top affix" data-original-title="" title="" style=" background-color:#2f2f2f;">
+						<button class="btn btn-primary" title="Back to Top">
+							<i class="fa fa-angle-double-up"></i>
+						</button>
+					</div>	
+					
+				</div>
+			</footer>
+			
+<footer id="footer-container">
+    <section id="footer">
+        <ul class="footer-links">
+        <li>©2017-&#8734 Copywriting Pty Ltd </li><p>&nbsp;</p>
+            <li id="menu-item-33" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-33"><span>| </span><a href="portfolio_sitemap.html">Sitemap</a></li><li id="menu-item-32" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-32"><span>| </span><a href="terms_conditions.html">Terms and conditions</a></li><li id="menu-item-31" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-31"><span>| </span><a href="privacy_policy.html">Privacy Policy</a></li><li id="menu-item-120" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-120"><span>| </span><a href="refund_policy.html">Refund Policy</a></li><li id="menu-item-34" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-34"><span>| </span><a href="contact.html">Contact</a></li></ul>
+       <p>&nbsp;</p><p>&nbsp;</p><br>
+
+	   <h3>MOB: 9876 598 765 </h3>
+<p> Specialist Website Creator , Brochure copywriter, case study copywriter,<br>
+sales letter copywriter, information architect, web designer &amp; app designer.</p>
+<p>&nbsp;</p>
+<h6><a href="http://kbcodes.com/" target="_blank">PROJECTS BY KUSHAGRA</a>. CODES AVAILABLE: HELLO@KBCODES.COM</h6>
+    </section>
+</footer>
+
+ <div class="content-wrapper" style="top: 0px;">
+<script>
+$(window).load(function(){
+    $(".loadAfterPage").each(function(){
+        $(this).attr('src', $(this).attr('data-src'))
+    })
+})
+</script>
+
+
+</body>
+</html>
